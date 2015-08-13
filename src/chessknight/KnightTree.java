@@ -104,7 +104,7 @@ public class KnightTree {
 		nodes.remove(startNode);
 		nodes.add(startNode);
 
-		while (stack.size() > 0) {
+		while (!stack.isEmpty()) {
 			// get next node from head of queue
 			KnightNode tmpNode = stack.getLast();
 			Set<KnightNode> childNodes = tmpNode.availableMoves;
@@ -152,7 +152,7 @@ public class KnightTree {
 		startNode.isUsed = true;
 		queue.add(startNode);
 	
-		while (queue.size() > 0) {
+		while (!queue.isEmpty()) {
 			// get next node from head of queue
 			KnightNode tmpNode = queue.remove();
 			Set<KnightNode> childNodes = tmpNode.availableMoves;
